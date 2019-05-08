@@ -23,4 +23,23 @@ function(){
 http://www.google.com
 `----------------------------------------------------`
 
+`----------------------------------------------------`
+`----- KEY LESSONS * KEY LESSONS * KEY LESSONS ------`
+`----------------------------------------------------`
+!1 - Data binding to attributes! Any HTML attribute (class, href, id, anything) should be passed by databining (using :ATTRIBUTE="binding", shortcut for v-bind:ATTRIBUTE="value")
+*Reason* This attributes expect an string, and it is taking the value {{abc}} as the string itself!
+
+!v-model! v-model is equal to v-value and emmit input event
+*These two elements are equivalent*
+    <input type="text" :value="nameURL"@input="nameURL = $event.target.value"/>
+    <input type="text" v-model="nameURL"/>
+
+!events!
+    *Double Click* v-on:dblclick
+    *On hover* v-on:mousemove
+
+
+
+`----------------------------------------------------`
+
 #SECTION 1.1: FIRST BASIC APPLICATION#

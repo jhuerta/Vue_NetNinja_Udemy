@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vue Basic</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <style>
+      .one {
+        color: green;
+      }
+
+      .two {
+        border: 2px solid red;
+      }
+      .canvas {
+        width: 300px;
+        height: 300px;
+        background: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ helloWorld }}</h1>
+      <h1>{{ greet() }}</h1>
+      <h1>{{ hello("morning") }}</h1>
+      <h1>{{ nameURL }}</h1>
+      <input
+        type="text"
+        :value="nameURL"
+        @input="nameURL = $event.target.value"
+      />
+      <button @click="nameURL = 'clicked!!!'">Change input value</button>
+      <button @click="increaseBy(1)" @dblClick="increaseBy(2)">
+        Increae: Single by 1, double by two ===> {{ amount }}
+      </button>
+      <button @click="alert">Alert</button>
+      <a :href="nameURL">This is google</a>
+      <h1 :class="classes">Binding classes</h1>
+
+      <div class="canvas" @mousemove="updateCoordinates">
+        X: {{ x }} Y: {{ y }}
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
