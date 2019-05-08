@@ -1,0 +1,26 @@
+`----------------------------------------------------`
+1. List One 
+2. List Two 
+`----------------------------------------------------`
+--> ----> 
+==> ===> ====>
+`----------------------------------------------------`
+[javascript]
+function() {
+    console.log("Hellow World!");
+}
+[end]
+
+function(){
+        console.log("Hellow World!");
+}
+
+`----------------------------------------------------`
+`Take Note` #Highlight# "Emphasis" * Important * !Remember! 
+//Comment
+[Square] (Other) {Brackets}
+`----------------------------------------------------`
+http://www.google.com
+`----------------------------------------------------`
+
+#SECTION 1.1: FIRST BASIC APPLICATION#
