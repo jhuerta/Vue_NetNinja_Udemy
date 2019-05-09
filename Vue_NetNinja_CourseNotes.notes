@@ -38,6 +38,15 @@ http://www.google.com
     *Double Click* v-on:dblclick
     *On hover* v-on:mousemove
 
+!test data!
+    *external* https://jsonplaceholder.typicode.com
+    *internal* json-server
+
+!axios!
+    npm install axios --save
+    import axios from './axios'
+    axios.get(url).then().catch
+
 
 
 `----------------------------------------------------`
