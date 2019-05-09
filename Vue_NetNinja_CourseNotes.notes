@@ -47,7 +47,40 @@ http://www.google.com
     import axios from './axios'
     axios.get(url).then().catch
 
+!filters!
+    // MayusculasFilter.js
+    import Vue from 'vue';
 
+    Vue.filter('mayusculas', (value, param_1) => {
+    return value.toUpperCase();
+    });
+    // main.js
+    import './MayusculasFilter.js';
+
+    // Component
+    <template>
+    ...
+    {{ text | mayusculas(3)}}
+    ...</template>
+
+!v-html!
+    To display a variable as HTML, and this will allow to make changes as if it were HTML:
+      return text.replace(this.searchText, `<b>${this.searchText}</b>`);
+!Search in string!
+    .match
+    .includes
+
+!Routes!
+    <router-link to="/">Home</router-link>|
+      <router-link :to="{name:'home'}">Home</router-link>|
+    // route.js
+    {
+      path: "/profile/:user_id",
+      name: "profile",
+      component: Profile
+    },
+    // Profile.vue
+    user_id: this.$route.params.user_id
 
 `----------------------------------------------------`
 

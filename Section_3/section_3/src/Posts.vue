@@ -1,7 +1,10 @@
 <template>
   <div>
-    <div v-for="post in posts" :key="post.id">
+    Filter:
+    <input type="text" v-model="searchText">
+    <div v-for="post in filteredPosts" :key="post.id">
       {{ post.id }} - {{ post.title }}
+      <div v-html="bolded(post.body)"></div>
     </div>
   </div>
 </template>
@@ -12,10 +15,19 @@ import axios from "axios";
 export default {
   data() {
     return {
-      posts: []
+      posts: [],
+      searchText: ""
     };
   },
+  methods: {
+    bolded(text) {
+      return text.replace(this.searchText, `<b>${this.searchText}</b>`);
+    }
+  },
   computed: {
+    filteredPosts() {
+      return this.posts.filter(p => p.body.includes(this.searchText));
+    },
     olderPosts() {
       return this.posts.filter(p => p.id > 90);
     }
@@ -34,7 +46,7 @@ export default {
     var self = this;
     setTimeout(function() {
       axios.get(url).then(p => {
-        self.posts = p.data;
+        self.posts = [p.data[0]];
       });
     }, 500);
   }

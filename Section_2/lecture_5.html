@@ -27,8 +27,13 @@
       <input
         type="text"
         :value="nameURL"
-        @input="nameURL = $event.target.value"
+        @keyup="nameURL = $event.target.value"
       />
+
+      With model:
+      <input type="text" v-model="nameURL" />
+
+      {{ nameURL }}
       <button @click="nameURL = 'clicked!!!'">Change input value</button>
       <button @click="increaseBy(1)" @dblClick="increaseBy(2)">
         Increae: Single by 1, double by two ===> {{ amount }}
