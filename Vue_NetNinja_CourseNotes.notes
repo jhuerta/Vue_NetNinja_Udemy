@@ -82,6 +82,21 @@ http://www.google.com
     // Profile.vue
     user_id: this.$route.params.user_id
 
+    // Name route
+    <router-link :to="{name:'profile', params: {user_id:user}}">{{user}}</router-link>
+    // Redirect, go forward, go backword
+        *Redirect*    this.$router.push({ name: "home" });
+        *Backword in history* this.$router.go(-1);
+        *Forward in history* this.$router.go(1);
+
+    // To remove the # from the URL
+        export default new Router({
+            mode: "history",
+
+    // Styling
+        The links created with router-link add classes that can be customize to indicate if we are in the same page as the link
+!watch!
+    Use watch object in vue to monitor things, like changes in $route
 `----------------------------------------------------`
 
 #SECTION 1.1: FIRST BASIC APPLICATION#
