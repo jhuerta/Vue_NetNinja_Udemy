@@ -145,6 +145,15 @@ http://www.google.com
     import moment from 'moment'
     moment(timeVariable).format(FORMAT_FROM_WEB)
 
+!vue-chat-scroll PLUGIN!
+npm install vue-chat-scroll
+
+//in main.js
+import VueChatScroll from 'vue-chat-scroll'
+Vue.use(VueChatScroll) <== USING IT AS A PLUGIN
+
+//in component we want to be scrolled down:
+<ul v-chat-scroll>
 
 
 !Vue CLI 3 Special Features! 
