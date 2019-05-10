@@ -109,6 +109,44 @@ http://www.google.com
 !slugify!
     used to create slugs (nice urls shortcuts)
 
+!routes with props!
+    Same as passing parameter in the URL but specifying 'props:true' in the route
+    // in routes file
+    routes: [{
+        name: 'Welcome',
+        path: '/Welcome',
+        component: 'WelcomeComponent',
+        props: true <====== That's what allows to pass data 
+    }]
+
+    // in component
+    export default {
+        props: ['name']
+    }
+    // in calling component
+        this.$route.push({name:'routeName', params: {name: 'value of prop'})
+
+!route guards!
+    Prevents user to enter a route (typing in URL or anyway else) depending on a condition
+      // in routes file
+    routes: [{
+        name: 'Welcome',
+        path: '/Welcome',
+        component: 'WelcomeComponent',
+        beforeEnter: (to,from,next) => { 
+            // check on to.params.name_of_param
+            next() // important to call next component
+            next({name: 'other_route'})
+        }
+    }]  
+
+!formatting data: USE MOMENTS!
+    npm install moment
+    import moment from 'moment'
+    moment(timeVariable).format(FORMAT_FROM_WEB)
+
+
+
 !Vue CLI 3 Special Features! 
     // Instant Prototyping!
         1) Install: npm install -g @vue/cli-service-global
@@ -127,6 +165,9 @@ http://www.google.com
     
 
     // Vue UI
+        To execute: vue ui
+        Can run the vue ui from any folder, with or without vue project
+        YOu can import existing Vue projects or create a new One
 
     // Plugin
         Plugins can modify files. However, the newly installed dependencies can't modify files
