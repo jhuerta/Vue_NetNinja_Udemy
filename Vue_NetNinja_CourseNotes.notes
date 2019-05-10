@@ -99,4 +99,44 @@ http://www.google.com
     Use watch object in vue to monitor things, like changes in $route
 `----------------------------------------------------`
 
+!submit!
+    Add the event to submit in the form tag, rather than the button itself
+    <form @submit.prevent='whatToDoOnSubmit'>
+
+!binding to an array index!
+    It is possible to bind an input (or any object) to array[index]. So, the model is bound to the position exactly of the array and can be modified.
+
+!slugify!
+    used to create slugs (nice urls shortcuts)
+
+!Vue CLI 3 Special Features! 
+    // Instant Prototyping!
+        1) Install: npm install -g @vue/cli-service-global
+        2) If you need sass: npm i -D sass-loader node-sass (for sass support)
+        3) Test the component: vue serve online.vue
+    
+    // Build Web Components
+        We can build:
+            App
+            Library
+            Web Component: Stand Alone component!
+        1) Install: npm install -g @vue/cli-service-global
+        2) vue build file.vue --target wc  --name online-status
+            -> wc for wecompnent
+            -> 
+    
+
+    // Vue UI
+
+    // Plugin
+        Plugins can modify files. However, the newly installed dependencies can't modify files
+        If you add the plugin Vuetify, some of the exiting Vue files will be modified with sample code
+        Add them by:
+            vue add vuetify
+            vue add babel
+            vue add eslint
+
+    npm run lint: To run lint and auto-fix
+
 #SECTION 1.1: FIRST BASIC APPLICATION#
+
