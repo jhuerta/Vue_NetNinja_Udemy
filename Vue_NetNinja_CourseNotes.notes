@@ -155,7 +155,6 @@ Vue.use(VueChatScroll) <== USING IT AS A PLUGIN
 //in component we want to be scrolled down:
 <ul v-chat-scroll>
 
-
 !Vue CLI 3 Special Features! 
     // Instant Prototyping!
         1) Install: npm install -g @vue/cli-service-global
@@ -170,9 +169,6 @@ Vue.use(VueChatScroll) <== USING IT AS A PLUGIN
         1) Install: npm install -g @vue/cli-service-global
         2) vue build file.vue --target wc  --name online-status
             -> wc for wecompnent
-            -> 
-    
-
     // Vue UI
         To execute: vue ui
         Can run the vue ui from any folder, with or without vue project
@@ -185,8 +181,16 @@ Vue.use(VueChatScroll) <== USING IT AS A PLUGIN
             vue add vuetify
             vue add babel
             vue add eslint
+    // Mounted
+        Use this hook to insert things into your DOM (created is before the DOM is rendered)
 
     npm run lint: To run lint and auto-fix
+
+!Using Google Map into application!
+    https://developers.google.com/maps/
+    Attach Google Project and billing method
+        Billing method is 200USD free everymonth and can be autostoppted
+        An alternative is low resolution map, just don't use the key api
 
 #SECTION 1.1: FIRST BASIC APPLICATION#
 
