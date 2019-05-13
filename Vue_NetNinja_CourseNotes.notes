@@ -192,5 +192,20 @@ Vue.use(VueChatScroll) <== USING IT AS A PLUGIN
         Billing method is 200USD free everymonth and can be autostoppted
         An alternative is low resolution map, just don't use the key api
 
+!Dirty Trick: Wrap Vue initialization!
+    Vue initialization can be wrap and be prevented to start based on any other conditions
+
+!Get geolocation from browser!
+    navigator.geolocation
+    "navigator" !!!! ---> That's the browser itself!!!
+    The location of the browser can be overriden in the dev tools
+
+!Route Guard!
+To add authentication per route
+Use router.beforeEach((to, from, next) => {
+
+})
+
+
 #SECTION 1.1: FIRST BASIC APPLICATION#
 
